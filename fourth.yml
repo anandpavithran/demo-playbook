@@ -1,0 +1,12 @@
+---
+- hosts: servera
+  tasks:
+   -  yum: name=httpd state=present
+   -  service: name=httpd state=started enabled=yes
+   -  copy: content="Hello World" dest=/var/www/html/index.html
+   #-  firewalld: service=http permanent=yes immediate=true state=enabled
+        
+
+                
+
+...

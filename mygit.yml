@@ -1,0 +1,20 @@
+---
+- name: Working with git
+  hosts: servera
+  tasks:
+   - name: Install GIT
+     ansible.builtin.yum:
+      name: git
+      state: present
+   - name: Clone the repository
+     ansible.builtin.git:
+      repo: https://github.com/anandpavithran/phpdemo
+      dest: /tmp/phpdemo
+      clone: yes
+      update: yes
+   - name: Add file
+     ansible.builtin.copy:
+      content: helloworld
+      dest: /tmp/phpdemo/a.txt
+   - ansible.builtin.shell: git  add /tmp/phpdemo;git commit -m "version1"
+...

@@ -1,0 +1,11 @@
+---
+- name: Demo of import Playbook
+  hosts: servera
+  tasks: 
+    - name: From main playbook
+      ansible.builtin.debug: msg="I am from MAIN FILE"
+    - name: include task1
+      include_tasks: tasks/task1.yml
+    - name: include task2
+      include_tasks: tasks/task2.yml
+...

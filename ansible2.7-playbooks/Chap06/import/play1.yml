@@ -1,0 +1,5 @@
+- hosts: servera
+  tasks:
+   - name: Display message1
+     ansible.builtin.debug:
+      msg: I am from play1

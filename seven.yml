@@ -1,0 +1,15 @@
+---
+- name: Demo
+  hosts: servera
+  vars_files:
+   - secret1.yml
+   - secret2.yml
+  tasks:
+   - name: Print message1
+     debug:
+      msg: "{{pkg1}}"
+   - name: encrypt
+     ansible.builtin.password_hash: "{{redhat|password_hash}}"
+   - name: Print message1
+     debug:
+      msg: "{{pkg2}}"

@@ -1,0 +1,10 @@
+workstation
+
+[web]
+servera
+station1
+
+[deb]
+serverb
+station2
+station1

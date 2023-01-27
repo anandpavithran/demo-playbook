@@ -1,0 +1,14 @@
+---
+- name: simple demo
+  hosts: serverd
+  #check_mode: no
+  tasks:
+   
+   - name: task1
+     ansible.builtin.yum:
+      name: httpd
+      state: present
+   - name: task2
+     ansible.builtin.copy:
+      content: hello
+      dest: /tmp/hai

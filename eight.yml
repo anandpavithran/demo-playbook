@@ -1,0 +1,17 @@
+---
+- name: Demo of handler
+  hosts: servera
+  tasks:
+   - name: task1
+     ansible.builtin.copy:
+      src: a.conf
+      dest: /tmp/a.conf
+     notify:
+      - myhandler1
+  handlers:
+   - name: myhandler1
+     ansible.builtin.service:
+      name: httpd
+      state: restarted
+      
+...

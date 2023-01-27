@@ -1,0 +1,33 @@
+---
+- name: Demo of webserver
+  hosts: servera
+  gather_facts: no
+  tasks:
+    - name: Install a package
+      ansible.builtin.yum:
+        name: httpd
+        state: present
+    - name: Start the service
+      ansible.builtin.service:
+        name: httpd
+        state: started
+        enabled: yes
+    - name: Deliver the content
+      ansible.builtin.copy:
+        content: "Hello World"
+        dest: /var/www/html/index.html
+    - name: Open the firewall
+      ansible.posix.firewalld:
+        service: http
+        permanent: yes
+        immediate: true
+        state: enabled
+- name:  Test the output
+  hosts: localhost
+  tasks:
+    - name: test
+      ansible.builtin.uri:
+        url: http://servera.lab.example.com
+        return_content: yes
+        status_code: 200
+...

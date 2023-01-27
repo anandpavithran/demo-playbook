@@ -1,0 +1,17 @@
+---
+- name: demo
+  #hosts: all
+  #hosts: ungrouped
+  #hosts: servera,serverb
+  #hosts: servera:serverb
+  #hosts: web 
+  #hosts: web:&deb 
+  #hosts: web:!station1
+  hosts:
+   - servera
+   - serverb
+  tasks:
+   - name: test1
+     ansible.builtin.debug:
+      msg: Testing the inventory
+...

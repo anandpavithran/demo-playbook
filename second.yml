@@ -1,0 +1,28 @@
+---
+- name: Demo of webserver
+  hosts: servera
+  tasks:
+    - name: Install a package
+      yum:
+        name: httpd
+        state: present
+    - name: Start the service
+      service:
+        name: httpd
+        state: started
+        enabled: yes
+    - name: Deliver the content
+      copy:
+        content: Hello World
+        dest: /var/www/html/index.html
+    - name: Open the firewall
+      firewalld:
+        service: http
+        permanent: yes
+        immediate: true
+        state: enabled
+        
+
+                
+
+...

@@ -1,0 +1,12 @@
+---
+  - name: use vhost role playbook
+    hosts: webservers
+
+    pre_tasks:
+      - ansible.builtin.debug: msg='Begning web server configuration.'
+    roles:
+      - myvhost
+    post_tasks:
+      - ansible.builtin.debug: msg='Web server has been configured.'
+        
+        

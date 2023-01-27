@@ -1,0 +1,8 @@
+---
+- name: demo
+  hosts: servera
+  tasks:
+    - name: first task
+      command: sleep 15
+    - name: second task
+      command: ls

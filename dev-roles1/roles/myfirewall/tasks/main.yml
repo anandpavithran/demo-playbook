@@ -1,0 +1,8 @@
+---
+# tasks file for my firewall
+  - name: install firewalld
+    ansible.builtin.yum: name=firewalld state=present
+  - name: start and enable firewalld
+    ansible.builtin.service: name=firewalld state=started enabled=true
+  - name: firewall services config
+    ansible.posix.firewalld: state=enabled immediate=true permanent=true service="{{ firewall_service }}"

@@ -1,0 +1,13 @@
+---
+- name: DEmo of webserver configuration
+  hosts: servera
+  tasks:
+   - name: Touch a file and set permissions
+     ansible.builtin.file:
+      path: /tmp/test
+      owner: devops
+      group: root
+      mode: 0640
+      setype: samba_share_t
+      state: touch
+...

@@ -1,0 +1,13 @@
+---
+- name: Demo of handler
+  hosts: servera
+  #ignore_errors: yes
+  tasks:
+   - name: task1
+     ansible.builtin.command: whoami
+   - name: task2
+     ansible.builtin.command: notacommand
+     ignore_errors: yes
+   - name: task3
+     ansible.builtin.command: uptime
+...

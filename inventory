@@ -1,0 +1,16 @@
+servere
+serverf
+
+[web]
+servera
+serverb
+
+[db]
+serverc
+serverd
+
+[range]
+station[a:f].example.com
+192.168.0.[1:3]
+
+

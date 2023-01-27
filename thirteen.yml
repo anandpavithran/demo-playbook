@@ -1,0 +1,20 @@
+---
+- name: Demo of handler
+  hosts: servera
+  tasks:
+  - name: block1 
+    block:
+      - name: task1
+        ansible.builtin.copy:
+         src: a.conf
+         dest: /tmp/a.conf
+    rescue:
+      - name: from rescue
+        ansible.builtin.debug:
+         msg: i am from rescue
+    always:
+      - name: from always
+        ansible.builtin.debug:
+         msg: i am from always
+      
+...

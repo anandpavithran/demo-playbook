@@ -1,0 +1,29 @@
+---
+- name: Demo of handler
+  hosts: servera
+  #ignore_errors: yes
+  force_handlers: yes
+  tasks:
+   - name: task1
+     ansible.builtin.copy:
+      src: a.conf
+      dest: /tmp/a.conf
+     notify:
+      - myhandler1
+   - name: task1-sub
+     ansible.builtin.command: notacoomand
+   - name: task2
+     ansible.builtin.copy:
+      src: b.conf
+      dest: /tmp/b.conf
+     notify:
+      - myhandler2
+  handlers:
+   - name: myhandler1
+     ansible.builtin.debug:
+      msg: task1 successfull 
+   - name: myhandler2
+     ansible.builtin.debug:
+      msg: task2 successfull 
+      
+...

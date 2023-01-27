@@ -1,0 +1,21 @@
+---
+- name: Demo of handler
+  hosts: servera
+  tasks:
+   - name: task1
+     ansible.builtin.copy:
+      src: a.conf
+      dest: /tmp/a.conf
+     register: apple 
+     failed_when: "'root' in apple.group"
+     notify:
+      - myhandler1
+   - name: print
+     ansible.builtin.debug:
+      var: apple
+  handlers:
+   - name: myhandler1
+     ansible.builtin.debug:
+      msg: task1 successfull 
+      
+...

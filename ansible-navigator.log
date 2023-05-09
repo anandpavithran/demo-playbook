@@ -929,3 +929,33 @@ n3.9/site-packages/ansible/modules
 2023-01-27T04:16:41.774318+00:00 ERROR 'ansible_navigator.actions.doc._run_runner' Error occurred while fetching doc for plugin package: '[WARNING]: log file at /home/student/common/ansible.log is not writeable and we cannot create it, aborting
 
 '
+2023-05-09T04:03:29.432727+00:00 ERROR 'ansible_navigator.actions.config._run_runner' Error occurred while fetching ansible config (list): '[WARNING]: log file at /home/student/common/ansible.log is not writeable and we cannot create it, aborting
+
+'
+2023-05-09T04:03:29.433430+00:00 ERROR 'ansible_navigator.actions.config._run_runner' Error occurred while fetching ansible config (dump): '[WARNING]: log file at /home/student/common/ansible.log is not writeable and we cannot create it, aborting
+
+'
+2023-05-09T04:08:18.144927+00:00 ERROR 'ansible_navigator.actions.config._run_runner' Error occurred while fetching ansible config (list): '[WARNING]: log file at /home/student/common/ansible.log is not writeable and we cannot create it, aborting
+
+'
+2023-05-09T04:08:18.145394+00:00 ERROR 'ansible_navigator.actions.config._run_runner' Error occurred while fetching ansible config (dump): '[WARNING]: log file at /home/student/common/ansible.log is not writeable and we cannot create it, aborting
+
+'
+2023-05-09T04:09:42.304204+00:00 WARNING 'ansible_navigator.image_manager.puller._log_message' Image inspection failed, image assumed to be corrupted or missing
+2023-05-09T04:09:42.828256+00:00 ERROR 'ansible_navigator.image_manager.puller._log_message' Execution environment pull failed
+2023-05-09T04:09:53.011262+00:00 ERROR 'ansible_navigator.actions.config._run_runner' Error occurred while fetching ansible config (list): '[WARNING]: log file at /home/student/common/ansible.log is not writeable and we cannot create it, aborting
+
+'
+2023-05-09T04:09:53.011742+00:00 ERROR 'ansible_navigator.actions.config._run_runner' Error occurred while fetching ansible config (dump): '[WARNING]: log file at /home/student/common/ansible.log is not writeable and we cannot create it, aborting
+
+'
+2023-05-09T04:10:32.530116+00:00 WARNING 'ansible_navigator.image_manager.puller._log_message' Image inspection failed, image assumed to be corrupted or missing
+2023-05-09T04:10:35.672228+00:00 ERROR 'ansible_navigator.image_manager.puller._log_message' Execution environment pull failed
+2023-05-09T04:13:41.127149+00:00 WARNING 'ansible_navigator.image_manager.puller._log_message' Image inspection failed, image assumed to be corrupted or missing
+2023-05-09T04:13:44.275489+00:00 ERROR 'ansible_navigator.image_manager.puller._log_message' Execution environment pull failed
+2023-05-09T04:14:43.612147+00:00 ERROR 'ansible_navigator.actions.config._run_runner' Error occurred while fetching ansible config (list): '[WARNING]: log file at /home/student/common/ansible.log is not writeable and we cannot create it, aborting
+
+'
+2023-05-09T04:14:43.612696+00:00 ERROR 'ansible_navigator.actions.config._run_runner' Error occurred while fetching ansible config (dump): '[WARNING]: log file at /home/student/common/ansible.log is not writeable and we cannot create it, aborting
+
+'
